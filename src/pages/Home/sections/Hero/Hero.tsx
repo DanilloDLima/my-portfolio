@@ -18,6 +18,8 @@ const FooterContainer = styled(Box)(({ theme }) => ({
     padding: theme.spacing(3),
     textAlign: "center",
     color: theme.palette.primary.contrastText,
+    width: '100%',
+    boxSizing: 'border-box',
 }));
 
 const IconContainer = styled(Box)(() => ({
@@ -35,11 +37,13 @@ const IconWithCaption = styled(Box)(() => ({
 const Hero = () => {
     const StyledHero = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.main,
-        minHeight: "calc(100vh - 165px)", // Subtraindo 200px da altura total
+        minHeight: "calc(100vh - 163px)", // Ajuste para a altura total disponível
         display: "flex",
         alignItems: "center",
         paddingTop: "100px",
         paddingBottom: "100px",
+        width: '100%',
+        boxSizing: 'border-box',
         [theme.breakpoints.down('sm')]: {
             paddingTop: "50px",
             paddingBottom: "50px",
@@ -76,7 +80,7 @@ const Hero = () => {
     return (
         <>
             <StyledHero>
-                <Container maxWidth={"lg"}>
+                <Container maxWidth="lg">
                     <Grid container spacing={2} alignItems="center">
                         <Grid item xs={12} md={5}>
                             <Box position={"relative"}>
@@ -98,13 +102,13 @@ const Hero = () => {
                                 variants={textAnimation}
                             >
                                 <Typography color={alpha("#FFFFFF", 0.7)} variant="h3" textAlign="center">
-                                    I'am programming student
+                                    I am a programming student
                                 </Typography>
                             </motion.div>
                             <Grid container display={"flex"} justifyContent={"center"} spacing={3} pt={3}>
                                 <Grid item xs={12} md={4} display={"flex"} justifyContent={"center"}>
                                     <a href="/assets/documents/Danillo-Dias-de-Lima-Curriculo.pdf" download="Danillo-Dias-de-Lima-Curriculo.pdf" style={{ textDecoration: "none" }}>
-                                        <StyledButton aria-label="Download CV" onClick={() => console.log("Contact")} >
+                                        <StyledButton aria-label="Download CV" onClick={() => console.log("")}  >
                                             <DownloadIcon />
                                             <Typography ml={1}>
                                                 Download CV
